@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>gam3ry | Interactive Dashboard</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body id="main-body"> <nav class="navbar navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#" id="site-logo">GAM3RY</a>
+            <span class="navbar-text text-info" id="live-status">System Online</span>
+        </div>
+    </nav>
+
+    <div class="container my-5">
+        <div class="row g-4">
+            <div class="col-lg-6">
+                <div class="card p-4 shadow">
+                    <h3 class="mb-4">Tournament Entry</h3>
+                    <form id="registrationForm">
+                        <div class="mb-3">
+                            <label class="form-label">Gamer Tag</label>
+                            <input type="text" id="gamerTag" class="form-control" placeholder="Enter Nickname" required>
+                            <small id="tagPreview" class="text-secondary">Preview: </small>
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Primary Role</label>
+                            <select id="playerRole" class="form-select">
+                                <option value="Entry Fragger">Entry Fragger</option>
+                                <option value="Support">Support</option>
+                                <option value="IGL">In-Game Leader</option>
+                                <option value="Sniper">Sniper</option>
+                            </select>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-6">
+                                <label class="form-label">Win Rate (%)</label>
+                                <input type="number" id="winRate" class="form-control" value="50" min="0" max="100">
+                            </div>
+                            <div class="col-6">
+                                <label class="form-label">Hours Played</label>
+                                <input type="number" id="hoursPlayed" class="form-control" value="100">
+                            </div>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary w-100 mt-4">Register Player</button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="col-lg-6">
+                <div class="card p-4 shadow h-100">
+                    <h3 class="mb-4">Player Profile</h3>
+                    <div id="profileDisplay" class="text-center py-5">
+                        <p class="text-muted italic">No player data submitted yet.</p>
+                    </div>
+                    
+                    <div class="mt-4">
+                        <h6>Global Perks:</h6>
+                        <span class="badge bg-secondary perk-item">Beta Tester</span>
+                        <span class="badge bg-secondary perk-item">Verified</span>
+                        <span class="badge bg-secondary perk-item">MVP</span>
+                    </div>
+                    
+                    <button id="themeToggle" class="btn btn-sm btn-outline-secondary mt-auto">Toggle Dark Mode</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
